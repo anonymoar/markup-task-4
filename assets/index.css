@@ -3,11 +3,6 @@ body
     margin: 0;
 }
 
-.card-content-text
-{
-    padding: 20px;
-}
-
 .cat-card
 {
     width: 300px;
@@ -15,23 +10,60 @@ body
     margin: 10px;
 }
 
-.cat-photo
+.cat-card__photo
 {
     width: 300px;
 }
 
-.cat-name
+.cat-card__name
 {
-    margin: 0 0 10px;
+    margin: 14px 20px 10px;
 }
 
-.cat-description-text
+.cat-short-descrption__info-line,
+.cat-descrption__info-line
 {
-    margin: 0;
+    margin: 0 20px;
     hyphens: auto;
+}
+
+.cat-short-descrption__status
+{
+    margin: 0 20px;
 }
 
 .cat-status
 {
-    margin-top: 20px;
+    margin: 20px 20px 30px 0;
+}
+
+input.chk-btn
+{
+    display: none;
+}
+
+input.chk-btn + label
+{
+    border: 1px solid grey;
+    background: ghoswhite;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input.chk-btn:not(:checked) + label:hover
+{
+    box-shadow: 0 1px 3px;
+}
+
+input.chk-btn + label:active,
+input.chk-btn:checked + label
+{
+    box-shadow: 0 0 3px inset;
+    background: #eee;
+}
+
+input.chk-btn:checked + .cat-card
+{
+    display: none;
 }
