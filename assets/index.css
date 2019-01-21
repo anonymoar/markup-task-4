@@ -3,16 +3,16 @@ body
     margin: 0;
 }
 
+.cat-cards
+{
+    padding: 20px 0 0 20px;
+}
+
 .cat-card
 {
     width: 300px;
     border: 1px solid #000;
-    margin: 20px;
-}
-
-.cat-card + .cat-card
-{
-    margin-left: 0;
+    margin: 0 20px 20px 0;
 }
 
 .cat-card__photo
@@ -71,15 +71,19 @@ body
     box-shadow: 0 1px 3px;
 }
 
-.chk-btn + label:active,
+.chk-btn + label:active
+{
+    box-shadow: 0 0 3px inset;
+    background: #eee;
+}
+
 .chk-btn:checked + label
 {
     box-shadow: 0 0 3px inset;
     background: #eee;
-    display: block;
     width: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: calc((100vw - 600px) / 2 + 9px);
+    display: block;
 }
 
 .chk-btn:not(:checked) ~ .cat-cards .cat-card
