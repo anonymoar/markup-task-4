@@ -65,8 +65,8 @@ body
     background-size: 100% 2px;
 }
 
-.cat-short-descrption__info-line,
-.cat-short-descrption__status
+.cat-short-description__info-line,
+.cat-short-description__status
 {
     margin: 0 20px;
     white-space: nowrap;
@@ -74,7 +74,7 @@ body
     text-overflow: ellipsis;
 }
 
-.cat-descrption__info-line
+.cat-description__info-line
 {
     margin: 0 20px;
     hyphens: auto;
@@ -131,13 +131,13 @@ body
     display: inline-block;
 }
 
-.chk-btn:checked ~ .cat-cards .cat-short-descrption__info-line,
-.chk-btn:checked ~ .cat-cards .cat-short-descrption__status
+.chk-btn:checked ~ .cat-cards .cat-short-description__info-line,
+.chk-btn:checked ~ .cat-cards .cat-short-description__status
 {
     display: none;
 }
 
-.chk-btn:not(:checked) ~ .cat-cards .cat-descrption__info-line
+.chk-btn:not(:checked) ~ .cat-cards .cat-description__info-line
 {
     display: none;
 }
