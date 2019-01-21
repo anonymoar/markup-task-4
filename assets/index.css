@@ -50,30 +50,36 @@ body
     margin: 20px 20px 30px 0;
 }
 
-input.chk-btn
+.chk-btn
 {
     display: none;
 }
 
-input.chk-btn + label
+.chk-btn + label
 {
     border: 1px solid grey;
     background: ghoswhite;
     padding: 5px 8px;
     cursor: pointer;
     border-radius: 5px;
+    display: inline-block;
+    margin: 20px 0 0 20px;
 }
 
-input.chk-btn:not(:checked) + label:hover
+.chk-btn:not(:checked) + label:hover
 {
     box-shadow: 0 1px 3px;
 }
 
-input.chk-btn + label:active,
-input.chk-btn:checked + label
+.chk-btn + label:active,
+.chk-btn:checked + label
 {
     box-shadow: 0 0 3px inset;
     background: #eee;
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .chk-btn:not(:checked) ~ .cat-cards .cat-card
