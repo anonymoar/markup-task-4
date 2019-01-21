@@ -22,7 +22,7 @@ body
     padding-bottom: 2px;
 }
 
-.cat-card:not(:first-child):hover
+.cat-card:hover
 {
     box-shadow: 0 0 20px #f89595;
     background: #fff;
