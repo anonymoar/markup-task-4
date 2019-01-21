@@ -7,29 +7,42 @@ body
 {
     width: 300px;
     border: 1px solid #000;
-    margin: 10px;
+    margin: 20px;
+}
+
+.cat-card + .cat-card
+{
+    margin-left: 0;
 }
 
 .cat-card__photo
 {
     width: 300px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .cat-card__name
 {
     margin: 14px 20px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .cat-short-descrption__info-line,
+.cat-short-descrption__status
+{
+    margin: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .cat-descrption__info-line
 {
     margin: 0 20px;
     hyphens: auto;
-}
-
-.cat-short-descrption__status
-{
-    margin: 0 20px;
 }
 
 .cat-status
@@ -63,7 +76,32 @@ input.chk-btn:checked + label
     background: #eee;
 }
 
-input.chk-btn:checked + .cat-card
+.chk-btn:not(:checked) ~ .cat-cards .cat-card
+{
+    display: inline-block;
+}
+
+.chk-btn:checked ~ .cat-cards .cat-short-descrption__info-line,
+.chk-btn:checked ~ .cat-cards .cat-short-descrption__status
 {
     display: none;
+}
+
+.chk-btn:not(:checked) ~ .cat-cards .cat-descrption__info-line
+{
+    display: none;
+}
+
+.chk-btn:checked ~ .cat-cards .cat-card
+{
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chk-btn:checked ~ .cat-cards .cat-card__photo
+{
+    width: 600px;
+    height: auto;
 }
