@@ -3,6 +3,12 @@ body
     margin: 0;
 }
 
+.content
+{
+    margin: 20px;
+    border: 1px solid #f89595;
+}
+
 .cat-cards
 {
     padding: 20px 0 0 20px;
@@ -76,7 +82,7 @@ body
     border-left: 10px solid #f89595;
     border-right: 10px solid #f89595;
     background: #fff;
-    transition: .5s ease all;
+    transition: .3s ease all;
 }
 
 .chk-btn + label
@@ -87,7 +93,7 @@ body
 .chk-btn:checked + label
 {
     width: 100px;
-    margin-left: calc((100vw - 600px) / 2 + 9px);
+    margin-left: calc((100vw - 600px) / 2 - 11px);
     display: block;
 }
 
