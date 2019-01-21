@@ -3,42 +3,6 @@ body
     margin: 0;
 }
 
-.chk-btn
-{
-    opacity: 0;
-    z-index: -1;
-}
-
-.chk-btn + label
-{
-    width: 40px;
-    height: 40px;
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    text-indent: -999px;
-    overflow: hidden;
-    border: 1px solid #f89595;
-    cursor: pointer;
-}
-
-.chk-btn + label
-{
-    border: 1px solid #f89595;
-    background-color: transparent;
-    transition: .8s ease border;
-}
-
-.chk-btn + label
-{
-    border-left: 10px solid #f89595;
-    border-right: 10px solid #f89595;
-    background: #fff;
-    transition: .5s ease all;
-    -moz-transition: .5s ease all;
-    -webkit-transition: .5s ease all;
-}
-
 .cat-cards
 {
     padding: 20px 0 0 20px;
@@ -89,11 +53,34 @@ body
 .chk-btn
 {
     display: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+.chk-btn + label,
+.chk-btn:checked:hover + label
+{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-indent: -999px;
+    overflow: hidden;
+    border: 1px solid #f89595;
+    cursor: pointer;
+}
+
+.chk-btn:hover + label,
+.chk-btn:checked + label
+{
+    border-left: 10px solid #f89595;
+    border-right: 10px solid #f89595;
+    background: #fff;
+    transition: .5s ease all;
 }
 
 .chk-btn + label
 {
-    display: inline-block;
     margin: 20px 0 0 20px;
 }
 
