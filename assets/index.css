@@ -19,6 +19,18 @@ body
     width: 300px;
     margin: 0 20px 20px 0;
     background: #f7d5d5;
+    padding-bottom: 2px;
+}
+
+.cat-card:not(:first-child):hover
+{
+    box-shadow: 0 0 20px #f89595;
+    background: #fff;
+}
+
+.cat-card:first-child:hover
+{
+    background: radial-gradient(50% 30%, #f89595, #fff);
 }
 
 .cat-card__photo
@@ -28,12 +40,29 @@ body
     object-fit: cover;
 }
 
+.cat-card__photo:hover
+{
+    outline: 3px dashed #f89595;
+    outline-offset: -10px;
+}
+
 .cat-card__name
 {
     margin: 14px 20px 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.cat-card__name:hover
+{
+    background-size: 100% 2px;
 }
 
 .cat-short-descrption__info-line,
